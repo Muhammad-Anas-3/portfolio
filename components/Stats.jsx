@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+// package
 import CountUp from "react-countup";
 
 const Stats = () => {
@@ -25,7 +25,7 @@ const Stats = () => {
   return (
     <section className="pt-4 pb-12 overflow-hidden xl:pt-0 xl:pb-6">
       <div className="container mx-auto">
-        <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
+        <div className="flex flex-wrap gap-6 max-w-[90vw] mx-auto xl:max-w-none">
           {stats.map((item, index) => {
             return (
               <div
@@ -36,12 +36,11 @@ const Stats = () => {
                   end={item.num}
                   duration={5}
                   delay={2}
-                  className="text-4xl xl:text-6xl font-extrabold"
+                  className="text-3xl xl:text-6xl font-extrabold"
                 />
                 <p
-                  className={`${
-                    item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
-                  } leading-snug text-white/80`}
+                  className={`${item.text.length < 15 ? "max-w-[80px]" : "max-w-[130px]"
+                    } leading-snug text-white/80`}
                 >
                   {item.text}
                 </p>

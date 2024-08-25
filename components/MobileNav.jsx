@@ -1,21 +1,20 @@
 "use client";
 
-import React from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
-import { usePathname } from "next/navigation";
+// shadcn ui components
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
-import { CiMenuFries } from "react-icons/ci";
+// hooks and Link
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import Link from "next/link";
+
+// icons
+import { CiMenuFries } from "react-icons/ci";
 
 const MobileNav = () => {
   const pathname = usePathname();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     {
@@ -40,8 +39,12 @@ const MobileNav = () => {
     },
   ];
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-green-500 text-[32px]" />
       </SheetTrigger>
@@ -61,12 +64,12 @@ const MobileNav = () => {
             <Link
               href={link.path}
               key={link.path}
-              className={`${
-                link.path === pathname &&
+              className={`${link.path === pathname &&
                 "text-green-500 border-b-2 border-green-500"
-              }
+                }
           capitalize hover:text-green-500 font-medium transition-all
           `}
+              onClick={handleLinkClick}
             >
               {link.name}
             </Link>

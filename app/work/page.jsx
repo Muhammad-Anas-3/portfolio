@@ -1,20 +1,27 @@
 "use client";
 
+// components
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
+
+// Pacakges
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { useState } from "react";
-import { BsArrowUpRight } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+
+// hooks and Next Image and Link
+import Link from "next/link";
 import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+import { useState } from "react";
+
+// Icons
+import { BsArrowUpRight } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 
 const Work = () => {
   const projects = [
@@ -94,7 +101,7 @@ const Work = () => {
         { name: "Expres js" },
       ],
       image: "/assets/work/TaskManager.png",
-      live: ":https://task-manager-frontend-pied.vercel.app/",
+      live: "https://task-manager-frontend-pied.vercel.app/",
       github: "https://github.com/Muhammad-Anas-3/Task-manager-frontend",
     },
   ];

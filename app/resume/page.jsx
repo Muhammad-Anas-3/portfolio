@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+// icons
 import {
   FaHtml5,
   FaCss3,
@@ -13,7 +13,10 @@ import { SiExpress } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
 
+// Package
 import { motion } from "framer-motion";
+
+// Components
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {

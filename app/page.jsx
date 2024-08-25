@@ -1,10 +1,15 @@
 "use client";
 
+// Components
 import MyPhoto from "@/components/MyPhoto";
 import SocialLinks from "@/components/SocialLinks";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
+
+// Icons
 import { FiDownload } from "react-icons/fi";
+
+// Package and Link
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -22,7 +27,6 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span>Software Developer</span>
             <h1 className="h1">
               Hello I&#39;m <br />
               <span className="text-green-500">Muhammad Anas</span>

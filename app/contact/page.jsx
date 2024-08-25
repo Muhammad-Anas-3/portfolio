@@ -1,38 +1,50 @@
 "use client";
 
-import React from "react";
+// Icons
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+
+// Package
 import { motion } from "framer-motion";
+
+// components
 import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { SelectGroup } from "@radix-ui/react-select";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const Contact = () => {
   const info = [
     {
       icon: <FaPhoneAlt />,
       title: "Phone",
-      description: "(+40) 321 654 876",
+      description: "+92 325 4991193",
     },
     {
       icon: <FaEnvelope />,
       title: "Email",
-      description: "youremail@gmail.com",
+      description: "muhammadanas222888@gmail.com",
     },
     {
       icon: <FaMapMarkerAlt />,
       title: "Address",
-      description: "Code Corner, Tech Town 13579",
+      description: "Lahore, Pakistan",
     },
   ];
+
+  const router = useRouter()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    router.push('/')
+  }
 
   return (
     <motion.section
@@ -47,8 +59,10 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-green-500">Let&#39;s work together</h3>
+            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" onSubmit={handleSubmit}>
+              <h3 className="text-4xl text-green-500">
+                Let&#39;s work together
+              </h3>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />
@@ -79,7 +93,7 @@ const Contact = () => {
                 placeholder="Your Project Details"
               />
               {/* button */}
-              <Button size="md" className="max-w-40">
+              <Button size="md" className="max-w-40" type='submit'>
                 Send Message
               </Button>
             </form>

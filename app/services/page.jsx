@@ -1,7 +1,9 @@
 "use client";
 
+// Package
 import { motion } from "framer-motion";
-import Link from "next/link";
+
+// Icon
 import { BsArrowDownRight } from "react-icons/bs";
 
 const Services = () => {
@@ -11,28 +13,24 @@ const Services = () => {
       title: "Frontend Web Development",
       description:
         "Building responsive and interactive user interfaces using HTML, CSS, JavaScript, React, and Tailwind CSS.",
-      href: "",
     },
     {
       num: "02",
       title: "Backend Web Development",
       description:
         "Creating robust and scalable server-side applications using Node.js and Express.js.",
-      href: "",
     },
     {
       num: "03",
       title: "MERN stack Development",
       description:
         "Developing complete web applications from front-end to back-end using React, Tailwind CSS, Node.js, and Express.js.",
-      href: "",
     },
     {
       num: "03",
       title: "Next.JS Development",
       description:
         "Developing complete web applications from front-end to back-end using Next.js and Tailwind CSS",
-      href: "",
     },
   ];
 
@@ -58,12 +56,9 @@ const Services = () => {
                   <div className="text-5xl font-extrabold text-outline w-full transition-all duration-500 hover:text-outline-hover text-transparent">
                     {service.num}
                   </div>
-                  <Link
-                    href={service.href}
-                    className="p-3 rounded-full bg-white group-hover:bg-green-500 transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                  >
+                  <div className="p-3 rounded-full bg-white group-hover:bg-green-500 transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                     <BsArrowDownRight className="text-black text-3xl" />
-                  </Link>
+                  </div>
                 </div>
                 {/* title */}
                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-green-500 transition-all duration-500">

@@ -24,13 +24,13 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span>Software Developer</span>
             <h1 className="h1">
-              Hello I'm <br />
+              Hello I&#39;m <br />
               <span className="text-green-500">Muhammad Anas</span>
             </h1>
             <p className="max-w-[500px] text-white/80 mb-9">
-              With hands-on experience in MERN and Next.js, I've built
+              With hands-on experience in MERN and Next.js, I&#39;ve built
               responsive, user-friendly web applications that exceed
-              expectations. Let's create something remarkable together.
+              expectations. Let&#39;s create something remarkable together.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

@@ -69,15 +69,15 @@ const Resume = () => {
     description:
       "Hello I'm Muhammad Anas With hands- on experience in MERN and Next.js, I've built responsive, user-friendly web applications that exceed expectations. Let's create something remarkable together.",
     items: [
+       {
+        company: "Alimco Soft",
+        position: "Frontend developer",
+        duration: "Sep-2024 - Present",
+      },
       {
         company: "Devsort",
         position: "Full Stack Developer Intern",
-        duration: "Jun-2024 - Present",
-      },
-      {
-        company: "Upwork Freelance",
-        position: "Full Stack Developer",
-        duration: "August-2023 - Present",
+        duration: "Jun-2024 - August-2024",
       },
     ],
   };
@@ -120,7 +120,7 @@ const Resume = () => {
     icon: "/assets/resume/cap.svg",
     title: "My Skills",
     description:
-      "I have honed a diverse set of skills in web development, including HTML, CSS, JavaScript, React, Node.js, Express.js, Next.js, and Tailwind CSS. These technologies have empowered me to build responsive, dynamic, and user-friendly web applications. Let's create something remarkable together.",
+      "I have honed a diverse set of skills in web development, including HTML, CSS, JavaScript, React, React Native, Node.js, Express.js, Next.js, and Tailwind CSS. These technologies have empowered me to build responsive, dynamic, and user-friendly web applications. Let's create something remarkable together.",
     skillList: [
       {
         icon: <FaHtml5 />,
@@ -141,6 +141,10 @@ const Resume = () => {
       {
         icon: <FaReact />,
         name: "React.js",
+      },
+       {
+        icon: <FaReact />,
+        name: "React Native",
       },
       {
         icon: <FaNodeJs />,

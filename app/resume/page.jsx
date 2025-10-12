@@ -42,7 +42,7 @@ const Resume = () => {
       },
       {
         fieldName: "Experience",
-        fieldValue: "6 Months",
+        fieldValue: "1+ Years",
       },
       {
         fieldName: "Nationality",
